@@ -60,6 +60,7 @@ export { chainsT0rnPNG } from './generated/t0rnPNG.js';
 export { chainsTanglePNG } from './generated/tanglePNG.js';
 export { chainsThxActivaPNG } from './generated/thx-activaPNG.js';
 export { chainsThxAethPNG } from './generated/thx-aethPNG.js';
+export { chainsThxAvatectPNG } from './generated/thx-avatectPNG.js';
 export { chainsThxIzutsuyaPNG } from './generated/thx-izutsuyaPNG.js';
 export { chainsThxMbTmpPNG } from './generated/thx-mb-tmpPNG.js';
 export { chainsThxMbPNG } from './generated/thx-mbPNG.js';

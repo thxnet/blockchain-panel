@@ -1,10 +1,16 @@
 // Copyright 2017-2023 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import type { EndpointOption } from './types.js';
+import type { EndpointOption } from "./types.js";
 
-import { chainsThxThxnetPNG, chainsThxThxPNG, chainsThxW3wPNG, chainsThxActivaPNG, chainsThxMbPNG } from '../ui/logos/chains/index.js';
-import { getTeleports } from './util.js';
+import {
+  chainsThxThxnetPNG,
+  chainsThxThxPNG,
+  chainsThxW3wPNG,
+  chainsThxMbPNG,
+  chainsThxAvatectPNG,
+} from "../ui/logos/chains/index.js";
+import { getTeleports } from "./util.js";
 
 // The available endpoints that will show in the dropdown. For the most part (with the exception of
 // Polkadot) we try to keep this to live chains only, with RPCs hosted by the community/chain vendor
@@ -13,77 +19,87 @@ import { getTeleports } from './util.js';
 //   providers: The actual hosted secure websocket endpoint
 //
 // IMPORTANT: Alphabetical based on text
-export const parasThx: Omit<EndpointOption, 'teleport'>[] = [];
+export const parasThx: Omit<EndpointOption, "teleport">[] = [];
 
 export const parasThxCommon: EndpointOption[] = [
   {
-    info: 'thx',
+    info: "thx",
     paraId: 1000,
     providers: {
-      'THXNET.': 'wss://node.thx.mainnet.thxnet.org/archive-001/ws'
+      "THXNET.": "wss://node.thx.mainnet.thxnet.org/archive-001/ws",
     },
     teleport: [-1],
-    text: 'thx! token',
+    text: "thx! token",
     ui: {
-      color: '#333F4F',
-      logo: chainsThxThxPNG
-    }
+      color: "#333F4F",
+      logo: chainsThxThxPNG,
+    },
   },
   {
-    info: 'lmt',
+    info: "lmt",
     paraId: 1001,
     providers: {
-      'THXNET.': 'wss://node.lmt.mainnet.thxnet.org/archive-001/ws'
+      "THXNET.": "wss://node.lmt.mainnet.thxnet.org/archive-001/ws",
     },
     teleport: [-1],
-    text: 'LimiteT',
+    text: "LimiteT",
     ui: {
-      color: '#333F4F',
-      logo: chainsThxW3wPNG
-    }
-  },
-  {
-    info: 'activa',
-    paraId: 1002,
-    providers: {
-      'THXNET.': 'wss://node.activa.mainnet.thxnet.org/archive-001/ws'
+      color: "#333F4F",
+      logo: chainsThxW3wPNG,
     },
-    teleport: [-1],
-    text: 'Activa',
-    ui: { 
-      color: '#333F4F',
-      logo: chainsThxActivaPNG
-    }
   },
+  // {
+  //   info: 'activa',
+  //   paraId: 1002,
+  //   providers: {
+  //     'THXNET.': 'wss://node.activa.mainnet.thxnet.org/archive-001/ws'
+  //   },
+  //   teleport: [-1],
+  //   text: 'Activa',
+  //   ui: {
+  //     color: '#333F4F',
+  //     logo: chainsThxActivaPNG
+  //   }
+  // },
   {
-    info: 'mirrored-body',
+    info: "mirrored-body",
     paraId: 1003,
     providers: {
-      'THXNET.': 'wss://node.mirrored-body.mainnet.thxnet.org/archive-001/ws'
+      "THXNET.": "wss://node.mirrored-body.mainnet.thxnet.org/archive-001/ws",
     },
     teleport: [-1],
-    text: 'Mirrored Body',
-    ui: { 
-      color: '#333F4F',
-      logo: chainsThxMbPNG
-    }
-  }
+    text: "Mirrored Body",
+    ui: {
+      color: "#333F4F",
+      logo: chainsThxMbPNG,
+    },
+  },
+  {
+    info: "avatect",
+    paraId: 1004,
+    providers: {
+      "THXNET.": "wss://node.avatect.mainnet.thxnet.org/archive-001/ws",
+    },
+    teleport: [-1],
+    text: "AVATECT",
+    ui: {
+      color: "#333F4F",
+      logo: chainsThxAvatectPNG,
+    },
+  },
 ];
 
 export const relayThx: EndpointOption = {
-  dnslink: 'thxnet',
-  info: 'thxnet',
-  linked: [
-    ...parasThxCommon,
-    ...parasThx
-  ],
+  dnslink: "thxnet",
+  info: "thxnet",
+  linked: [...parasThxCommon, ...parasThx],
   providers: {
-    'THXNET.': 'wss://node.mainnet.thxnet.org/archive-001/ws'
+    "THXNET.": "wss://node.mainnet.thxnet.org/archive-001/ws",
   },
   teleport: getTeleports(parasThxCommon),
-  text: 'THXNET.',
+  text: "THXNET.",
   ui: {
-    color: '#333F4F',
-    logo: chainsThxThxnetPNG
-  }
+    color: "#333F4F",
+    logo: chainsThxThxnetPNG,
+  },
 };
