@@ -3,7 +3,7 @@
 
 import type { EndpointOption } from './types.js';
 
-import { chainsThxSandPNG, chainsThxThxnetPNG, chainsThxThxPNG, chainsThxW3wPNG, chainsThxIzutsuyaPNG, chainsThxMbPNG } from '../ui/logos/chains/index.js';
+import { chainsThxSandPNG, chainsThxThxnetPNG, chainsThxThxPNG, chainsThxW3wPNG, chainsThxIzutsuyaPNG, chainsThxEcqPNG } from '../ui/logos/chains/index.js';
 import { getTeleports } from './util.js';
 
 // The available endpoints that will show in the dropdown. For the most part (with the exception of
@@ -68,19 +68,6 @@ export const testParasThxCommon: EndpointOption[] = [
       logo: chainsThxSandPNG
     }
   },
-  // {
-  //   info: 'testAeth',
-  //   paraId: 1004,
-  //   providers: {
-  //     'THXNET.': 'wss://node.aether.testnet.thxnet.org/archive-001/ws'
-  //   },
-  //   teleport: [-1],
-  //   text: 'Aether Testnet',
-  //   ui: {
-  //     color: '#333F4F',
-  //     logo: chainsThxAethPNG
-  //   }
-  // },
   {
     info: 'testIzutsuya',
     paraId: 1005,
@@ -95,16 +82,16 @@ export const testParasThxCommon: EndpointOption[] = [
     }
   },
   {
-    info: 'mirrored-body-test',
-    paraId: 1006,
+    info: 'testEcq',
+    paraId: 1007,
     providers: {
-      'THXNET.': 'wss://node.mirrored-body-test.testnet.thxnet.org/archive-001/ws'
+      'THXNET.': 'wss://node.ecq.testnet.thxnet.org/archive-001/ws'
     },
     teleport: [-1],
-    text: 'Mirrored Body Test',
-    ui: { 
+    text: 'ECQ Testnet',
+    ui: {
       color: '#333F4F',
-      logo: chainsThxMbPNG
+      logo: chainsThxEcqPNG
     }
   }
 ];

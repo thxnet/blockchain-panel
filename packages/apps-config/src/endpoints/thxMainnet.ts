@@ -7,8 +7,8 @@ import {
   chainsThxThxnetPNG,
   chainsThxThxPNG,
   chainsThxW3wPNG,
-  chainsThxMbPNG,
   chainsThxAvatectPNG,
+  chainsThxEcqPNG,
 } from "../ui/logos/chains/index.js";
 import { getTeleports } from "./util.js";
 
@@ -48,32 +48,6 @@ export const parasThxCommon: EndpointOption[] = [
       logo: chainsThxW3wPNG,
     },
   },
-  // {
-  //   info: 'activa',
-  //   paraId: 1002,
-  //   providers: {
-  //     'THXNET.': 'wss://node.activa.mainnet.thxnet.org/archive-001/ws'
-  //   },
-  //   teleport: [-1],
-  //   text: 'Activa',
-  //   ui: {
-  //     color: '#333F4F',
-  //     logo: chainsThxActivaPNG
-  //   }
-  // },
-  {
-    info: "mirrored-body",
-    paraId: 1003,
-    providers: {
-      "THXNET.": "wss://node.mirrored-body.mainnet.thxnet.org/archive-001/ws",
-    },
-    teleport: [-1],
-    text: "Mirrored Body",
-    ui: {
-      color: "#333F4F",
-      logo: chainsThxMbPNG,
-    },
-  },
   {
     info: "avatect",
     paraId: 1004,
@@ -85,6 +59,19 @@ export const parasThxCommon: EndpointOption[] = [
     ui: {
       color: "#333F4F",
       logo: chainsThxAvatectPNG,
+    },
+  },
+  {
+    info: "ecq",
+    paraId: 1005,
+    providers: {
+      "THXNET.": "wss://node.ecq.mainnet.thxnet.org/archive-001/ws",
+    },
+    teleport: [-1],
+    text: "ECQ Security Evidence Chain",
+    ui: {
+      color: "#333F4F",
+      logo: chainsThxEcqPNG,
     },
   },
 ];
