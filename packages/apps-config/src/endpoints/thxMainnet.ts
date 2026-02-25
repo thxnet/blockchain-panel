@@ -65,7 +65,7 @@ export const parasThxCommon: EndpointOption[] = [
     info: "ecq",
     paraId: 1005,
     providers: {
-      "THXNET.": "wss://node.ecq.mainnet.thxnet.org/archive-001/ws",
+      "THXNET.": "wss://node.ecq.mainnet.thxnet.org/archive-002/ws",
     },
     teleport: [-1],
     text: "ECQ Security Evidence Chain",
