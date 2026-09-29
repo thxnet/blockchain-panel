@@ -7,7 +7,6 @@ import {
   chainsThxThxnetPNG,
   chainsThxThxPNG,
   chainsThxW3wPNG,
-  chainsThxAvatectPNG,
   chainsThxEcqPNG,
 } from "../ui/logos/chains/index.js";
 import { getTeleports } from "./util.js";
@@ -46,19 +45,6 @@ export const parasThxCommon: EndpointOption[] = [
     ui: {
       color: "#333F4F",
       logo: chainsThxW3wPNG,
-    },
-  },
-  {
-    info: "avatect",
-    paraId: 1004,
-    providers: {
-      "THXNET.": "wss://node.avatect.mainnet.thxnet.org/archive-001/ws",
-    },
-    teleport: [-1],
-    text: "AVATECT",
-    ui: {
-      color: "#333F4F",
-      logo: chainsThxAvatectPNG,
     },
   },
   {

@@ -1,4 +1,4 @@
-FROM ubuntu:latest as builder
+FROM ubuntu:24.04 AS builder
 
 # Install any needed packages
 RUN apt-get update && \
